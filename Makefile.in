@@ -1,18 +1,19 @@
 prefix=@prefix@
 exec_prefix=@exec_prefix@
-libdir="@libdir@"
-CFLAGS="@CFLAGS@"
-CPPFLAGS="@CPPFLAGS@"
+srcdir = @srcdir@
+libdir=@libdir@
+CFLAGS=@CFLAGS@
+CPPFLAGS=@CPPFLAGS@
 
-CC="@CC@"
+CC=@CC@
 
-all: base58.so
+all: ${srcdir}/base58.so
 
-base58.so: base58.c
+${srcdir}/base58.so: ${srcdir}/base58.c
 	${CC} ${CPPFLAGS} ${CFLAGS} -Wall -shared -fPIC -o $@ $<
 
 clean:
-	rm -f base58.so
+	rm -f ${srcdir}/base58.so
 
 install:
-	install --mode=644 --group=root --owner=root base58.so ${libdir}/tarantool
+	install --mode=644 --group=root --owner=root ${srcdir}/base58.so ${libdir}/tarantool

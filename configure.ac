@@ -13,5 +13,6 @@ AC_CHECK_HEADERS([tarantool/lauxlib.h])
 if test "$ac_cv_header_tarantool_luaxlib_h" == "no" ; then
 	AC_MSG_ERROR([luaxlib.h not found])
 fi
+srcdir="src"
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
