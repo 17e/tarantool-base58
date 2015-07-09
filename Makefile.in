@@ -16,4 +16,4 @@ clean:
 	rm -f ${srcdir}/base58.so
 
 install:
-	install --mode=644 --group=root --owner=root ${srcdir}/base58.so ${DESTDIR}${libdir}/tarantool
+	install -D --mode=644 ${srcdir}/base58.so ${DESTDIR}${libdir}/tarantool/base58.so
