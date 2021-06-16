@@ -1,9 +1,9 @@
-prefix=@prefix@
-exec_prefix=@exec_prefix@
+prefix = @prefix@
+exec_prefix = @exec_prefix@
 srcdir = @srcdir@
-libdir=@libdir@
-CFLAGS=@CFLAGS@
-CPPFLAGS=@CPPFLAGS@
+libdir ?= @libdir@
+CFLAGS = @CFLAGS@
+CPPFLAGS = @CPPFLAGS@
 
 CC=@CC@
 
@@ -16,4 +16,4 @@ clean:
 	rm -f ${srcdir}/base58.so
 
 install:
-	install -D --mode=644 ${srcdir}/base58.so ${DESTDIR}${libdir}/tarantool/base58.so
+	install -D --mode=644 ${srcdir}/base58.so ${DESTDIR}${libdir}/lua/base58.so

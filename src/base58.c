@@ -6,8 +6,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <tarantool/lua.h>
-#include <tarantool/lauxlib.h>
+#include <lua.h>
+#include <lauxlib.h>
 
 char *nb58 = "123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ";
 /****************************************************************************************************************************************************
