@@ -1,16 +1,15 @@
-Name:    tarantool-base58
+Name:    lua-base58
 Version: 0.01	
 Release: 1%{?dist}
-Summary: base58 encode/decode subroutines for tarantool 1.5	
+Summary: base58 encode/decode subroutines 
 
 Group:	 Development/Libraries
 License: GPLv2	
 URL:		 https://github.com/17e/tarantool-base58
 Source0: tarantool-base58.tar.bz2
 
-BuildRequires:	tarantool-dev < 1.6
+BuildRequires:	lua-devel >= 5.1
 BuildRequires:	autoconf
-Requires:	tarantool < 1.6
 
 %description
 https://github.com/17e/tarantool-base58
@@ -34,7 +33,7 @@ make install DESTDIR=%{buildroot}
 %files
 %defattr(-,root,root,-)
 %doc README
-%attr(0755, root, root) %{_libdir}/tarantool/base58.so
+%attr(0755, root, root) %{_libdir}/lua/base58.so
 
 
 %changelog

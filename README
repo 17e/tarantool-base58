@@ -1,1 +1,31 @@
 base58 encode/decode subroutines for tarantool 1.5
+
+# How to build
+### _Dependencies_
+
+Tools:
+    - autoconf
+    - make
+
+Also for building this module you should provide Lua headers files
+which you can found from original Lua sources or LuaJIT sources.
+
+Provisioning of these headers depends on distriburion package manager
+but mostly common way to get it - download from official resources e.g.
+    - Lua https://github.com/lua/lua
+    - LuaJIT from Openresty https://github.com/openresty/luajit2
+
+### _Building_
+
+```sh
+autoconf configure.am > configure
+chmod +x configure
+CPPFLAGS="${CPPFLAGS} -I/path/to/lua/headers" ./configure
+make
+```
+
+### _Installing_
+
+```sh
+make install
+```
